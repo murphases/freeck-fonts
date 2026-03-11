@@ -175,7 +175,7 @@ Install Node.js at [nodejs.org](https://nodejs.org)
 
 ## Installation
 
-Download the installer for your OS from the [Releases page](https://github.com/murphases/freeckfonts/releases/latest):
+Download the installer for your OS from the [Releases page](https://github.com/murphases/freeck-fonts/releases):
 
 | OS                    | File                             | Description                      |
 | --------------------- | -------------------------------- | -------------------------------- |
