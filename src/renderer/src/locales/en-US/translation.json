@@ -1,0 +1,158 @@
+{
+  "app": {
+    "tagline": "Font Manager"
+  },
+  "nav": {
+    "browse": "Browse",
+    "installed": "Installed",
+    "favorites": "Favorites",
+    "settings": "Settings",
+    "downloads": "Downloads"
+  },
+  "header": {
+    "pageTitles": {
+      "browse": "Browse Fonts",
+      "installed": "Installed Fonts",
+      "favorites": "Favorite Fonts",
+      "settings": "Settings"
+    },
+    "searchPlaceholder": "Search fonts...",
+    "previewPlaceholder": "Preview text...",
+    "filters": "Filters"
+  },
+  "browse": {
+    "allFonts": "All fonts",
+    "fontCount_one": "{{count}} font",
+    "fontCount_other": "{{count}} fonts",
+    "loadMore": "Load more",
+    "errorLoading": "Error loading fonts",
+    "configureApiKey": "Configure your Google Fonts API Key in Settings",
+    "retry": "Try again",
+    "noResults": "No fonts found",
+    "noResultsHint": "Try adjusting the filters or search"
+  },
+  "fontCard": {
+    "addFavorite": "Add to favorites",
+    "removeFavorite": "Remove from favorites",
+    "install": "Install",
+    "downloading": "Downloading",
+    "installed": "Installed",
+    "variant_one": "{{count}} variant",
+    "variant_other": "{{count}} variants"
+  },
+  "filters": {
+    "title": "Filters",
+    "clear": "Clear",
+    "sort": "Sort",
+    "sortOptions": {
+      "popularity:desc": "Most popular",
+      "name:asc": "Name A→Z",
+      "name:desc": "Name Z→A",
+      "newest:desc": "Newest"
+    },
+    "sources": "Sources",
+    "categories": "Categories",
+    "other": "Other",
+    "licenses": "Licenses",
+    "show": "Show",
+    "onlyInstalled": "Only installed",
+    "onlyFavorites": "Only favorites"
+  },
+  "downloads": {
+    "title": "Downloads",
+    "clearCompleted": "Clear completed",
+    "cancel": "Cancel",
+    "unknownError": "Unknown error",
+    "status": {
+      "pending": "Pending",
+      "downloading": "Downloading",
+      "extracting": "Extracting",
+      "installing": "Installing",
+      "completed": "Completed",
+      "error": "Error",
+      "cancelled": "Cancelled"
+    }
+  },
+  "installed": {
+    "fontCount_one": "{{count}} installed font",
+    "fontCount_other": "{{count}} installed fonts",
+    "openFolder": "Open folder",
+    "refresh": "Refresh",
+    "empty": "No fonts installed",
+    "emptySearch": "No fonts found",
+    "emptyHint": "Install fonts from the Browse page",
+    "emptySearchHint": "Try another search term"
+  },
+  "favorites": {
+    "fontCount_one": "{{count}} favorite font",
+    "fontCount_other": "{{count}} favorite fonts",
+    "empty": "No favorite fonts",
+    "emptySearch": "No fonts found",
+    "emptyHint": "Click the heart icon on any font while browsing",
+    "emptySearchHint": "Try another search term"
+  },
+  "settings": {
+    "title": "Settings",
+    "subtitle": "Configure FreeckFonts to your preferences.",
+    "googleFonts": {
+      "title": "Google Fonts",
+      "description": "To list Google Fonts, you need a free API Key.",
+      "howToGet": "How to get →"
+    },
+    "preview": {
+      "title": "Font Preview",
+      "defaultText": "Default preview text",
+      "previewSize": "Preview size: {{size}}px",
+      "placeholder": "Preview text..."
+    },
+    "appearance": {
+      "title": "Appearance",
+      "dark": "🌙 Dark",
+      "light": "☀️ Light",
+      "system": "💻 System"
+    },
+    "language": {
+      "title": "Language",
+      "description": "Choose the application language.",
+      "restartNotice": "Language changed successfully."
+    },
+    "installation": {
+      "title": "Font Installation",
+      "mode": "Installation mode",
+      "userMode": "👤 Current user",
+      "userModeDesc": "No admin privileges required",
+      "systemMode": "🖥️ System",
+      "systemModeDesc": "Requires administrator",
+      "fontsFolder": "Fonts folder",
+      "detecting": "Detecting...",
+      "open": "Open"
+    },
+    "about": {
+      "title": "About FreeckFonts",
+      "version": "Version: {{version}}",
+      "sources": "Available sources: Google Fonts, Font Squirrel, FontSpace, 1001 Fonts, Font Library, Open Foundry",
+      "description": "Cross-platform desktop application for font management."
+    },
+    "save": "Save settings",
+    "saved": "Saved! ✓"
+  },
+  "onboarding": {
+    "welcome": "Welcome to FreeckFonts",
+    "subtitle": "Your typography discovery and management hub.",
+    "chooseLanguage": "Choose your preferred language to get started:",
+    "continue": "Continue"
+  },
+  "update": {
+    "availableTitle": "Update Available",
+    "readyTitle": "Ready to Install",
+    "errorTitle": "Update Failed",
+    "description": "Version {{version}} is available. Update now to get the latest improvements and fixes.",
+    "downloading": "Downloading update, please wait...",
+    "readyDescription": "The update has been downloaded. Restart the app to apply it.",
+    "errorDescription": "Failed to download the update. Please try again later.",
+    "updateNow": "Update now",
+    "later": "Later",
+    "restart": "Restart now",
+    "badge": "New version {{version}} available — click to update"
+  }
+}

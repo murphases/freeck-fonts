@@ -1,0 +1,185 @@
+# ============================================================
+# FreeckFonts — CI/CD: Build & Release
+#
+# Dispara quando uma tag semântica é criada (ex: v1.2.3).
+# Compila o app para Windows, macOS e Linux em paralelo e
+# publica os artefatos em um GitHub Release.
+#
+# Segredos necessários no repositório (Settings → Secrets):
+#   - GH_TOKEN  →  token com permissão "contents: write"
+#                  (pode usar o GITHUB_TOKEN padrão — veja abaixo)
+# ============================================================
+name: Build & Release
+
+on:
+    push:
+        tags:
+            - "v[0-9]+.[0-9]+.[0-9]*"
+
+# Permissão para criar releases e fazer upload de assets
+permissions:
+    contents: write
+
+jobs:
+    # ----------------------------------------------------------
+    # Windows — NSIS installer + portable .exe
+    # ----------------------------------------------------------
+    build-windows:
+        name: Build (Windows)
+        runs-on: windows-latest
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: "20"
+                  cache: "npm"
+
+            - name: Install dependencies
+              run: npm ci
+
+            - name: Build & package
+              run: npm run package:win
+              env:
+                  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+            - name: Upload artifacts
+              uses: actions/upload-artifact@v4
+              with:
+                  name: windows-dist
+                  path: |
+                      dist-electron/*.exe
+                      dist-electron/*.yml
+                  retention-days: 1
+
+    # ----------------------------------------------------------
+    # macOS — DMG (x64 + arm64)
+    # ----------------------------------------------------------
+    build-macos:
+        name: Build (macOS)
+        runs-on: macos-latest
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: "20"
+                  cache: "npm"
+
+            - name: Install dependencies
+              run: npm ci
+
+            - name: Build & package
+              run: npm run package:mac
+              env:
+                  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  # Descomente e configure se tiver assinatura de código Apple:
+                  # CSC_LINK: ${{ secrets.APPLE_CERT_P12_BASE64 }}
+                  # CSC_KEY_PASSWORD: ${{ secrets.APPLE_CERT_PASSWORD }}
+                  # APPLE_ID: ${{ secrets.APPLE_ID }}
+                  # APPLE_APP_SPECIFIC_PASSWORD: ${{ secrets.APPLE_APP_SPECIFIC_PASSWORD }}
+                  # APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+
+            - name: Upload artifacts
+              uses: actions/upload-artifact@v4
+              with:
+                  name: macos-dist
+                  path: |
+                      dist-electron/*.dmg
+                      dist-electron/*.zip
+                      dist-electron/*.yml
+                  retention-days: 1
+
+    # ----------------------------------------------------------
+    # Linux — AppImage + .deb
+    # ----------------------------------------------------------
+    build-linux:
+        name: Build (Linux)
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: "20"
+                  cache: "npm"
+
+            - name: Install Linux build dependencies
+              run: |
+                  sudo apt-get update -y
+                  sudo apt-get install -y \
+                    libgtk-3-dev \
+                    libnotify-dev \
+                    libnss3 \
+                    libxss1 \
+                    libxtst6 \
+                    xauth \
+                    xvfb \
+                    rpm \
+                    libsecret-1-dev
+
+            - name: Install dependencies
+              run: npm ci
+
+            - name: Build & package
+              run: npm run package:linux
+              env:
+                  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+            - name: Upload artifacts
+              uses: actions/upload-artifact@v4
+              with:
+                  name: linux-dist
+                  path: |
+                      dist-electron/*.AppImage
+                      dist-electron/*.deb
+                      dist-electron/*.yml
+                  retention-days: 1
+
+    # ----------------------------------------------------------
+    # Publica o GitHub Release com todos os artefatos
+    # ----------------------------------------------------------
+    release:
+        name: Publish Release
+        needs: [build-windows, build-macos, build-linux]
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+
+            - name: Download all artifacts
+              uses: actions/download-artifact@v4
+              with:
+                  path: dist-electron
+                  merge-multiple: true
+
+            - name: List release files
+              run: ls -lh dist-electron/
+
+            - name: Create GitHub Release
+              uses: softprops/action-gh-release@v2
+              with:
+                  tag_name: ${{ github.ref_name }}
+                  name: "FreeckFonts ${{ github.ref_name }}"
+                  draft: false
+                  prerelease: ${{ contains(github.ref_name, '-') }}
+                  generate_release_notes: true
+                  files: |
+                      dist-electron/*.exe
+                      dist-electron/*.dmg
+                      dist-electron/*.zip
+                      dist-electron/*.AppImage
+                      dist-electron/*.deb
+                      dist-electron/*.yml
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

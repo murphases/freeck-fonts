@@ -1,0 +1,158 @@
+{
+  "app": {
+    "tagline": "Gerenciador de Fontes"
+  },
+  "nav": {
+    "browse": "Explorar",
+    "installed": "Instaladas",
+    "favorites": "Favoritas",
+    "settings": "Configurações",
+    "downloads": "Downloads"
+  },
+  "header": {
+    "pageTitles": {
+      "browse": "Explorar Fontes",
+      "installed": "Fontes Instaladas",
+      "favorites": "Fontes Favoritas",
+      "settings": "Configurações"
+    },
+    "searchPlaceholder": "Buscar fontes...",
+    "previewPlaceholder": "Texto de preview...",
+    "filters": "Filtros"
+  },
+  "browse": {
+    "allFonts": "Todas as fontes",
+    "fontCount_one": "{{count}} fonte",
+    "fontCount_other": "{{count}} fontes",
+    "loadMore": "Carregar mais",
+    "errorLoading": "Erro ao carregar fontes",
+    "configureApiKey": "Configure sua Google Fonts API Key nas Configurações",
+    "retry": "Tentar novamente",
+    "noResults": "Nenhuma fonte encontrada",
+    "noResultsHint": "Tente ajustar os filtros ou a busca"
+  },
+  "fontCard": {
+    "addFavorite": "Adicionar aos favoritos",
+    "removeFavorite": "Remover dos favoritos",
+    "install": "Instalar",
+    "downloading": "Baixando",
+    "installed": "Instalada",
+    "variant_one": "{{count}} variante",
+    "variant_other": "{{count}} variantes"
+  },
+  "filters": {
+    "title": "Filtros",
+    "clear": "Limpar",
+    "sort": "Ordenar",
+    "sortOptions": {
+      "popularity:desc": "Mais populares",
+      "name:asc": "Nome A→Z",
+      "name:desc": "Nome Z→A",
+      "newest:desc": "Mais recentes"
+    },
+    "sources": "Origens",
+    "categories": "Categorias",
+    "other": "Outros",
+    "licenses": "Licenças",
+    "show": "Mostrar",
+    "onlyInstalled": "Apenas instaladas",
+    "onlyFavorites": "Apenas favoritas"
+  },
+  "downloads": {
+    "title": "Downloads",
+    "clearCompleted": "Limpar concluídos",
+    "cancel": "Cancelar",
+    "unknownError": "Erro desconhecido",
+    "status": {
+      "pending": "Aguardando",
+      "downloading": "Baixando",
+      "extracting": "Extraindo",
+      "installing": "Instalando",
+      "completed": "Concluído",
+      "error": "Erro",
+      "cancelled": "Cancelado"
+    }
+  },
+  "installed": {
+    "fontCount_one": "{{count}} fonte instalada",
+    "fontCount_other": "{{count}} fontes instaladas",
+    "openFolder": "Abrir pasta",
+    "refresh": "Atualizar",
+    "empty": "Nenhuma fonte instalada",
+    "emptySearch": "Nenhuma fonte encontrada",
+    "emptyHint": "Instale fontes pela página Explorar",
+    "emptySearchHint": "Tente outro termo de busca"
+  },
+  "favorites": {
+    "fontCount_one": "{{count}} fonte favorita",
+    "fontCount_other": "{{count}} fontes favoritas",
+    "empty": "Nenhuma fonte favorita",
+    "emptySearch": "Nenhuma fonte encontrada",
+    "emptyHint": "Marque fontes como favoritas ao explorar",
+    "emptySearchHint": "Tente outro termo de busca"
+  },
+  "settings": {
+    "title": "Configurações",
+    "subtitle": "Configure o FreeckFonts de acordo com suas preferências.",
+    "googleFonts": {
+      "title": "Google Fonts",
+      "description": "Para listar fontes do Google Fonts, você precisa de uma API Key gratuita.",
+      "howToGet": "Como obter →"
+    },
+    "preview": {
+      "title": "Preview de Fonte",
+      "defaultText": "Texto padrão de preview",
+      "previewSize": "Tamanho do preview: {{size}}px",
+      "placeholder": "Preview de texto..."
+    },
+    "appearance": {
+      "title": "Aparência",
+      "dark": "🌙 Escuro",
+      "light": "☀️ Claro",
+      "system": "💻 Sistema"
+    },
+    "language": {
+      "title": "Idioma",
+      "description": "Escolha o idioma da aplicação.",
+      "restartNotice": "Idioma alterado com sucesso."
+    },
+    "installation": {
+      "title": "Instalação de Fontes",
+      "mode": "Modo de instalação",
+      "userMode": "👤 Usuário atual",
+      "userModeDesc": "Sem privilégios de admin",
+      "systemMode": "🖥️ Sistema",
+      "systemModeDesc": "Requer administrador",
+      "fontsFolder": "Pasta de fontes",
+      "detecting": "Detectando...",
+      "open": "Abrir"
+    },
+    "about": {
+      "title": "Sobre o FreeckFonts",
+      "version": "Versão: {{version}}",
+      "sources": "Fontes disponíveis: Google Fonts, Font Squirrel, FontSpace, 1001 Fonts, Font Library, Open Foundry",
+      "description": "Aplicação desktop multiplataforma para gerenciamento de fontes."
+    },
+    "save": "Salvar configurações",
+    "saved": "Salvo! ✓"
+  },
+  "onboarding": {
+    "welcome": "Bem-vindo ao FreeckFonts",
+    "subtitle": "Sua central de descoberta e gerenciamento de tipografia.",
+    "chooseLanguage": "Escolha seu idioma para começar:",
+    "continue": "Continuar"
+  },
+  "update": {
+    "availableTitle": "Atualização Disponível",
+    "readyTitle": "Pronto para Instalar",
+    "errorTitle": "Falha na Atualização",
+    "description": "A versão {{version}} está disponível. Atualize agora para obter as últimas melhorias e correções.",
+    "downloading": "Baixando atualização, aguarde...",
+    "readyDescription": "A atualização foi baixada. Reinicie o app para aplicá-la.",
+    "errorDescription": "Não foi possível baixar a atualização. Tente novamente mais tarde.",
+    "updateNow": "Atualizar agora",
+    "later": "Depois",
+    "restart": "Reiniciar agora",
+    "badge": "Nova versão {{version}} disponível — clique para atualizar"
+  }
+}
