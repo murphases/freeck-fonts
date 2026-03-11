@@ -13,7 +13,7 @@ Explore thousands of fonts from multiple online sources, preview them in real ti
 
 <br />
 
-[![Release](https://img.shields.io/github/v/release/freeckfonts/freeckfonts?style=flat-square&color=6366f1&label=version)](https://github.com/freeckfonts/freeckfonts/releases)
+[![Release](https://img.shields.io/github/v/tag/murphases/freeck-fonts?style=flat-square&color=6366f1&label=version)](https://github.com/murphases/freeck-fonts/releases)
 [![License](https://img.shields.io/badge/license-MIT%20%2B%20Commons%20Clause-ec4899?style=flat-square)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-0ea5e9?style=flat-square)](#installation)
 [![Built with Electron](https://img.shields.io/badge/built%20with-Electron-47848f?style=flat-square&logo=electron)](https://electronjs.org)
@@ -175,7 +175,7 @@ Install Node.js at [nodejs.org](https://nodejs.org)
 
 ## Installation
 
-Download the installer for your OS from the [Releases page](https://github.com/freeckfonts/freeckfonts/releases/latest):
+Download the installer for your OS from the [Releases page](https://github.com/murphases/freeckfonts/releases/latest):
 
 | OS                    | File                             | Description                      |
 | --------------------- | -------------------------------- | -------------------------------- |
