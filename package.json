@@ -117,7 +117,7 @@
     "autoprefixer": "^10.4.17",
     "electron": "^28.2.2",
     "electron-builder": "^24.13.2",
-    "electron-vite": "^2.0.0",
+    "electron-vite": "^5.0.0",
     "png-to-ico": "^3.0.1",
     "png2icons": "^2.0.1",
     "postcss": "^8.4.35",
