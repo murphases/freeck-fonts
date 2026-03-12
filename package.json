@@ -100,7 +100,7 @@
     "cheerio": "^1.0.0-rc.12",
     "electron-updater": "^6.8.3",
     "i18next": "^25.8.18",
-    "lucide-react": "^0.363.0",
+    "lucide-react": "^0.577.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-i18next": "^16.5.8",
