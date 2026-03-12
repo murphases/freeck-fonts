@@ -1,8 +1,11 @@
 {
   "name": "freeckfonts",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Central hub for font discovery, preview, and management",
-  "author": "murphases",
+  "author": {
+    "name": "murphases",
+    "email": "paulomarques.rs1@gmail.com"
+  },
   "license": "MIT + Commons Clause",
   "main": "./out/main/index.js",
   "scripts": {
