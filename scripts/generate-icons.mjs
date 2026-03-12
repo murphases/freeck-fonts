@@ -19,7 +19,7 @@ if (!existsSync(resourcesDir)) {
 }
 
 const svgContent = readFileSync(
-  join(rootDir, "FreeckFonts - Icon.svg"),
+  join(rootDir, "src", "renderer", "src", "assets", "images", "logo.svg"),
   "utf8",
 );
 
