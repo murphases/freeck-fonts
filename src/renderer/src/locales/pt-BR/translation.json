@@ -129,9 +129,25 @@
     },
     "about": {
       "title": "Sobre o FreeckFonts",
-      "version": "Versão: {{version}}",
-      "sources": "Fontes disponíveis: Google Fonts, Font Squirrel, FontSpace, 1001 Fonts, Font Library, Open Foundry",
-      "description": "Aplicação desktop multiplataforma para gerenciamento de fontes."
+      "version": "Versão {{version}}",
+      "description": "Central de descoberta e gerenciamento de tipografia para Windows, macOS e Linux.",
+      "copyright": "© 2024 murphases. Todos os direitos reservados.",
+      "github": "Ver projeto no GitHub",
+      "reportBug": "Reportar bug ou problema",
+      "openIssues": "Ver issues abertas",
+      "sources": "Fontes de dados: Google Fonts · Font Squirrel · FontSpace · 1001 Fonts · Font Library · Open Foundry",
+      "license": {
+        "title": "Licença",
+        "body": "Este software é distribuído sob a licença MIT + Commons Clause. O uso pessoal e não-comercial é livre e gratuito. A venda ou redistribuição comercial do software sem autorização expressa do autor é proibida."
+      },
+      "terms": {
+        "title": "Termos de Uso",
+        "body": "O FreeckFonts é uma ferramenta de gerenciamento de fontes. As fontes baixadas e instaladas permanecem sujeitas às licenças de seus respectivos criadores e distribuidores. O usuário é inteiramente responsável pelo cumprimento dessas licenças. O software é fornecido \"como está\", sem garantias de qualquer tipo."
+      },
+      "guidelines": {
+        "title": "Diretrizes de Uso",
+        "body": "Use as fontes somente conforme permitido por suas licenças individuais. Fontes com licença OFL e de código aberto podem ser usadas livremente. Verifique sempre os termos de cada fonte antes de uso comercial. Contribuições, relatos de bugs e sugestões são bem-vindos via GitHub Issues."
+      }
     },
     "save": "Salvar configurações",
     "saved": "Salvo! ✓"

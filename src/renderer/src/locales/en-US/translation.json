@@ -129,9 +129,25 @@
     },
     "about": {
       "title": "About FreeckFonts",
-      "version": "Version: {{version}}",
-      "sources": "Available sources: Google Fonts, Font Squirrel, FontSpace, 1001 Fonts, Font Library, Open Foundry",
-      "description": "Cross-platform desktop application for font management."
+      "version": "Version {{version}}",
+      "description": "Typography discovery and management hub for Windows, macOS and Linux.",
+      "copyright": "© 2024 murphases. All rights reserved.",
+      "github": "View project on GitHub",
+      "reportBug": "Report a bug or issue",
+      "openIssues": "View open issues",
+      "sources": "Data sources: Google Fonts · Font Squirrel · FontSpace · 1001 Fonts · Font Library · Open Foundry",
+      "license": {
+        "title": "License",
+        "body": "This software is distributed under the MIT + Commons Clause license. Personal and non-commercial use is free. Selling or commercially redistributing this software without explicit permission from the author is prohibited."
+      },
+      "terms": {
+        "title": "Terms of Use",
+        "body": "FreeckFonts is a font management tool. Fonts downloaded and installed remain subject to the licenses of their respective creators and distributors. The user is solely responsible for complying with those licenses. The software is provided \"as is\", without warranties of any kind."
+      },
+      "guidelines": {
+        "title": "Usage Guidelines",
+        "body": "Use fonts only as permitted by their individual licenses. OFL and open-source fonts may be used freely. Always check each font's terms before commercial use. Contributions, bug reports and suggestions are welcome via GitHub Issues."
+      }
     },
     "save": "Save settings",
     "saved": "Saved! ✓"

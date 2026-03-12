@@ -53,9 +53,10 @@ function createWindow(): void {
     autoHideMenuBar: true,
     backgroundColor: "#0f1117",
     titleBarStyle: process.platform === "darwin" ? "hiddenInset" : "default",
-    ...(process.platform === "linux"
-      ? { icon: join(__dirname, "../../resources/icon.png") }
-      : {}),
+    icon:
+      process.platform === "win32"
+        ? join(__dirname, "../../resources/icon.ico")
+        : join(__dirname, "../../resources/icon.png"),
     webPreferences: {
       preload: join(__dirname, "../preload/index.js"),
       sandbox: false,
