@@ -48,6 +48,9 @@ jobs:
           VERSION="${VERSION#v}"
           npm version "$VERSION" --no-git-tag-version
 
+      - name: Generate icons
+        run: npm run generate-icons
+
       - name: Build & package
         run: npm run package:win
         env:
@@ -89,6 +92,9 @@ jobs:
           VERSION="${{ github.ref_name }}"
           VERSION="${VERSION#v}"
           npm version "$VERSION" --no-git-tag-version
+
+      - name: Generate icons
+        run: npm run generate-icons
 
       - name: Build & package
         run: npm run package:mac
@@ -152,6 +158,9 @@ jobs:
           VERSION="${{ github.ref_name }}"
           VERSION="${VERSION#v}"
           npm version "$VERSION" --no-git-tag-version
+
+      - name: Generate icons
+        run: npm run generate-icons
 
       - name: Build & package
         run: npm run package:linux

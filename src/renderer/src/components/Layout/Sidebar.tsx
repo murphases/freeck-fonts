@@ -2,18 +2,12 @@
 // Sidebar — navegação lateral da aplicação
 // ============================================================
 import React from "react";
-import {
-  Globe,
-  HardDrive,
-  Heart,
-  Settings,
-  Download,
-  Layers,
-} from "lucide-react";
+import { Globe, HardDrive, Heart, Settings, Download } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useAppStore } from "../../store/useAppStore";
 import { useDownloadStore } from "../../store/useDownloadStore";
 import { useFontStore } from "../../store/useFontStore";
+import logo from "../../assets/images/logo.svg";
 
 type Page = "browse" | "installed" | "favorites" | "settings";
 
@@ -49,9 +43,7 @@ export const Sidebar: React.FC = () => {
       {/* Logo */}
       <div className="px-4 py-5 border-b border-border">
         <div className="flex items-center gap-2.5">
-          <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-            <Layers size={16} className="text-white" />
-          </div>
+          <img src={logo} alt="FreeckFonts" className="w-8 h-8 rounded-lg" />
           <div>
             <h1 className="text-white font-bold text-sm leading-none">
               FreeckFonts

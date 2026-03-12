@@ -5,7 +5,6 @@ out/
 .env
 .env.local
 *.log
-resources/icon.ico
-resources/icon.icns
 .DS_Store
 Thumbs.db
+package-lock.json
